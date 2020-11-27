@@ -3,7 +3,7 @@
        Outer content - press [Enter] to load the iframe
        <div id="iframeHolder"></div>
 
-       <script src="//ajax.googleapis.com/ajax/libs/prototype/1.7.2.0/prototype.js"></script>
+       <script src="http://ajax.googleapis.com/ajax/libs/prototype/1.7.2.0/prototype.js"></script>
        <script>
            // Create a function for the child frame to call
            function regainFocus(){
@@ -26,7 +26,7 @@
             var x = document.getElementById('iframeHolder').contentWindow;
             //x = window.frames[0];
 
-            x.document.getElementsByTagName("body")[0].style.backgroundColor = "blue";
+            x.document.getElementById("bodyid").style.backgroundColor = "blue";
             // this would turn the 1st iframe in document blue.
            }
        </script>
