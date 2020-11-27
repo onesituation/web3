@@ -21,5 +21,14 @@
                frame.observe('load', function(){ this.contentWindow.focus(); });
                $('iframeHolder').appendChild(frame);
            });});
+
+           function test(){
+            var x = document.getElementById('iframeHolder').contentWindow;
+            //x = window.frames[0];
+
+            x.document.getElementsByTagName("body")[0].style.backgroundColor = "blue";
+            // this would turn the 1st iframe in document blue.
+           }
        </script>
+       
 </body></html>
