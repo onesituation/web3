@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html;charset=utf-8" /></head><body>
+       Inner content - press [Esc] to close the iframe
+
+       <script src="//ajax.googleapis.com/ajax/libs/prototype/1.7.2.0/prototype.js"></script>
+       <script>
+           // When the inner document loads, start handling keystrokes
+           Event.observe(window, 'load', function(){ Event.observe(window, 'keyup', function(e){
+               // Catch only the Esc key
+               if((e.which||window.event.keyCode) != Event.KEY_ESC) return;
+
+               // Call the parent's function
+               parent.regainFocus();
+           });});
+       </script>
+</body></html>
